@@ -19,8 +19,8 @@ set directory=~/.vim/vimtemp/
 set backupdir=~/.vim/vimtemp/
 set undodir=~/.vim/vimtemp/
 
-set lines=50
-set columns=150
+"set lines=50
+"set columns=150
 
 set incsearch	     " increment search
 set hlsearch	     " highlight search results
