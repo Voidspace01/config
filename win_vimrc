@@ -32,12 +32,12 @@ function MyDiff()
   endif
 endfunction
 
-silent execute '!mkdir "'.$VIMRUNTIME.'\vimtemp"'  
-silent execute '!del "'.$VIMRUNTIME.'\vimtemp\*" /Q'
+silent execute '!mkdir "'.$HOME.'\vimtemp"'  
+silent execute '!del "'.$HOME.'\vimtemp\*" /Q'
 
-set directory=$VIMRUNTIME/vimtemp//
-set backupdir=$VIMRUNTIME/vimtemp//
-set undodir=$VIMRUNTIME/vimtemp//
+set directory=$HOME/vimtemp//
+set backupdir=$HOME/vimtemp//
+set undodir=$HOME/vimtemp//
 
 set lines=50
 set columns=150
@@ -51,7 +51,7 @@ set nocompatible
 "=====================================================
 " Vundle settings
 "=====================================================
-set rtp+=c:\Prog\Vim\vimfiles\bundle\Vundle.vim
+set rtp+=~\bundle\Vundle.vim
 
 call vundle#begin()
 
