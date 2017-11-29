@@ -51,7 +51,7 @@ set nocompatible
 "=====================================================
 " Vundle settings
 "=====================================================
-set rtp+=~\bundle\Vundle.vim
+set rtp+=$HOME/.vim/bundle/Vundle.vim/
 
 call vundle#begin()
 
