@@ -2,6 +2,12 @@ source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
 
+set encoding=utf-8
+set langmenu=en_US
+let $LANG = 'en_US'
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+
 set diffexpr=MyDiff()
 function MyDiff()
   let opt = '-a --binary '
@@ -48,6 +54,8 @@ set nu	             " show lines numbers
 
 set nocompatible
 
+
+
 "=====================================================
 " Vundle settings
 "=====================================================
@@ -57,7 +65,7 @@ call vundle#begin()
 
 "---------=== Code/project navigation ===-------------
 Plugin 'scrooloose/nerdtree' 	    	" Project and file navigation
-Plugin 'davidhalter/jedi-vim' 		" Jedi-vim autocomplete plugin
+"Plugin 'davidhalter/jedi-vim' 		" Jedi-vim autocomplete plugin
 call vundle#end()            		" required
 
 filetype on
