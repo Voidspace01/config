@@ -2,11 +2,6 @@
 " properly set to work with the Vim-related packages available in Debian.
 runtime! debian.vim
 
-" Uncomment the next line to make Vim more Vi-compatible
-" NOTE: debian.vim sets 'nocompatible'.  Setting 'compatible' changes numerous
-" options, so any other options should be set AFTER setting 'compatible'.
-"set compatible
-
 " Vim5 and later versions support syntax highlighting. Uncommenting the next
 " line enables syntax highlighting by default.
 if has("syntax")
@@ -24,14 +19,17 @@ set incsearch     " increment search
 set hlsearch      " highlight search results
 set nu            " show lines numbers
 
+" find additional .vimrc in startup dir
+set exrc
+" stay secure when add additional .vimrc
+set secure
+
 " show existing tab with 3 spaces width
 set tabstop=3
 " when indenting with '>', use 3 spaces width
 set shiftwidth=3
 " On pressing tab, insert 3 spaces
 set expandtab
-
-set nocompatible              " be iMproved, required
 
 "======================================================
 " Highlight code
@@ -54,6 +52,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree' " Project and file navigation
+Plugin 'Valloric/YouCompleteMe' " Completion plugin
+Plugin 'vim-scripts/cscope.vim' " Cscope plugin
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
