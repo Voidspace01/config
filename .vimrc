@@ -54,19 +54,15 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'scrooloose/nerdtree' " Project and file navigation
-Plugin 'Valloric/YouCompleteMe' " Completion plugin
+"Plugin 'Valloric/YouCompleteMe' " Completion plugin
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
 filetype plugin indent on    " required
 
-" NerdTree settings
-" Show NERDTree F3
-map <F3> :NERDTreeToggle<CR>
-
 " Cscope settings
+" Scope. Update.
 function UpdateCScopeDB()
    let curdir = getcwd()
 
@@ -85,8 +81,16 @@ function UpdateCScopeDB()
    execute "cd" . curdir
 endfunction
 
+" Scope. For find calling function
+function SetCScopeFile()
+   if filereadable("cscope.out")
+      execute "cs add " . getcwd() . "/cscope.out "
+   endif
+endfunction
+
 if has("cscope")
    set cst
    nmap <F11> :call UpdateCScopeDB()<CR>
+   call SetCScopeFile()
 endif
 
