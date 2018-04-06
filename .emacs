@@ -13,7 +13,15 @@
 
 ;; remove all keybindings from insert-state keymap
 (setcdr evil-insert-state-map nil)
+
 ;; but [escape] should switch back to normal state
 (define-key evil-insert-state-map [escape] 'evil-normal-state)
 
-(setq scroll-step 1) ;; keyboard scroll one line at a time
+;; keyboard scroll one line at a time
+(setq scroll-step 1) 
+
+;; enable line numbers for c files
+(global-linum-mode t)
+
+;; disable menu bar
+(menu-bar-mode -1)
