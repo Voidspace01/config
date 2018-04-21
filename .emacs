@@ -25,3 +25,9 @@
 
 ;; disable menu bar
 (menu-bar-mode -1)
+
+;; c margins style and offset
+(setq c-default-style "linux" c-basic-offset 3)
+
+;; tmp files
+(setq backup-directory-alist `(("." . "~/.emacs.d/.saves/")))
