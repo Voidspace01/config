@@ -26,3 +26,6 @@ source ~/.bash_aliases
 
 # Disable cursor blinking
 printf '\033[?12l'
+
+#set vim as default editor
+export EDITOR=vim
