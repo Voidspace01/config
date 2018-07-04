@@ -35,11 +35,17 @@ set expandtab
 " Highlight code
 "======================================================
 
+" Comments color
 highlight Comment ctermfg=LightYellow
+
+" / search highlighting
 highlight IncSearch ctermbg=Black ctermfg=White
 
 " Set highlight for *.pc files
 au BufRead,BufNewFile *.pc set filetype=c
+
+" Cscope results 
+highlight ModeMsg ctermfg=Magenta
 
 "======================================================
 " Vundle settings
