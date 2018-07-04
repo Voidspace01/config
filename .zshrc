@@ -19,7 +19,8 @@ setopt CORRECT
 setopt APPEND_HISTORY
 
 # Set prompt format
-PS1="%n@%M:%d$"
+#PS1="%n@%M:%d$"
+PS1="%*:%d$"
 
 # Aliaces file
 source ~/.bash_aliases

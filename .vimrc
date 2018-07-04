@@ -35,7 +35,8 @@ set expandtab
 " Highlight code
 "======================================================
 
-highlight Comment ctermfg=lightyellow
+highlight Comment ctermfg=LightYellow
+highlight IncSearch ctermbg=Black ctermfg=White
 
 " Set highlight for *.pc files
 au BufRead,BufNewFile *.pc set filetype=c
@@ -53,6 +54,10 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+" Add ident lines. To toggle - :IndentLinesToggle.
+Plugin 'Yggdroot/indentLine'
+" Git blame
+Plugin 'tpope/vim-fugitive'
 
 "Plugin 'Valloric/YouCompleteMe' " Completion plugin
 
@@ -93,4 +98,3 @@ if has("cscope")
    nmap <F11> :call UpdateCScopeDB()<CR>
    call SetCScopeFile()
 endif
-
