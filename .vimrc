@@ -104,3 +104,6 @@ if has("cscope")
    nmap <F11> :call UpdateCScopeDB()<CR>
    call SetCScopeFile()
 endif
+
+" disable comment autoadd
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
