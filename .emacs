@@ -7,8 +7,17 @@
 (setq visible-cursor nil)
 (blink-cursor-mode 0)
 
+;; enable ctrl+u scrll up for evil
 (setq evil-want-C-u-scroll t)
 
+;; smooth display scrolling with arrows
+(setq redisplay-dont-pause t
+  scroll-margin 1
+  scroll-step 1
+  scroll-conservatively 10000
+  scroll-preserve-screen-position 1)
+
+;; enable evil
 (require 'evil)
 (evil-mode 1)
 
@@ -38,7 +47,10 @@
 ;; c margins style and offset
 (setq c-default-style "linux" c-basic-offset 3)
 (add-to-list 'auto-mode-alist '("\\.pc\\'" . c-mode))
-(setq sh-basic-offset 2)
+
+;; highlight pair parentheses
+(show-paren-mode 1)
+(setq show-paren-delay 0)
 
 ;; tmp files
 (setq backup-directory-alist `(("." . "~/.emacs.d/.saves/")))
@@ -48,6 +60,7 @@
 (setq tab-stop-list '(3 6 9 12 15 18))
 (setq sh-basic-offset 3 sh-indentation 3)
 
+;; default codepage
 (setq-default buffer-file-coding-system 'utf-8-unix)
 (setq-default default-buffer-file-coding-system 'utf-8-unix)
 
@@ -70,4 +83,7 @@
 (toggle-frame-maximized)
 
 ;; bind keys
-(define-key global-map [(meta ctrl i)] 'cscope-set-initial-directory) 
+;; example
+;;(define-key global-map [(f9)] (c-mode)) 
+;; (global-set-key (kbd "<f9>") (lambda () (interactive) (c-mode) (cscope-set-initial-directory default-directory)))
+(global-set-key (kbd "<f9>") (lambda () (interactive) (c-mode) (cscope-set-initial-directory default-directory) (visit-tags-table (locate-dominating-file default-directory "TAGS"))))
