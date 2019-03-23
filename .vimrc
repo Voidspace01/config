@@ -101,7 +101,7 @@ endfunction
 
 if has("cscope")
    set cst
-   nmap <F11> :call UpdateCScopeDB()<CR>
+   nmap <F9> :call UpdateCScopeDB()<CR>
    call SetCScopeFile()
 endif
 

@@ -31,6 +31,9 @@
 (cscope-setup)
 (setq cscope-do-not-update-database t)
 
+;; groovy mode
+(require 'groovy-mode)
+
 ;; set font
 (add-to-list 'default-frame-alist '(font . "Source code pro-14" ))
 (set-face-attribute 'default t :font "Source code pro-14" )
@@ -72,7 +75,7 @@
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
  '(custom-enabled-themes (quote (tango-dark)))
- '(package-selected-packages (quote (magit ## evil))))
+ '(package-selected-packages (quote (groovy-mode magit ## evil))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
