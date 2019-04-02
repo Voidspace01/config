@@ -1,6 +1,6 @@
 #witch to ZSH shell
 if test -t 1; then
-   exec zsh
+#   exec zsh
 fi
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
