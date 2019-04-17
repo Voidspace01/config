@@ -1,5 +1,7 @@
+#!/usr/bin/env bash
+
 rm -f ./cscope.*
-touch cscope.out
+touch cscope.files
 find ./ -name "*.c" -o -name "*.pc" -o -name "*.h" > cscope.files
 cscope -b -q -i cscope.files
 rm -f ./TAGS
