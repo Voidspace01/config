@@ -10,6 +10,11 @@ cp .zshrc ~
 
 cp .tmux.conf ~
 
+# cscope script
+mkdir ~/script
+cp cs.sh ~/script
+chmod +x ~/script/cs.sh
+
 # install fonts
 FONT_HOME=~/.local/share/fonts
 
