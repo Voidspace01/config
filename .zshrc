@@ -28,5 +28,8 @@ source ~/.bash_aliases
 # Disable cursor blinking
 printf '\033[?12l'
 
-#set vim as default editor
+# Set vim as default editor
 export EDITOR=vim
+
+# Add script folder to path
+export PATH=$PATH:~/script
