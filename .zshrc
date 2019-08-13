@@ -28,8 +28,11 @@ source ~/.bash_aliases
 # Disable cursor blinking
 printf '\033[?12l'
 
-# Set vim as default editor
+#set vim as default editor
 export EDITOR=vim
 
-# Add script folder to path
 export PATH=$PATH:~/script
+
+case "$TERM" in
+   xterm-256color) color_prompt=yes;;
+esac
