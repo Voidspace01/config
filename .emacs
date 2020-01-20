@@ -11,7 +11,7 @@
 (setq evil-want-C-u-scroll t)
 
 ;; enable tab 
-(global-set-key (kbd "<tab>") #'tab-to-tab-stop)
+(global-set-key (kbd "<C-tab>") #'tab-to-tab-stop)
 
 ;; smooth display scrolling with arrows
 (setq redisplay-dont-pause t
