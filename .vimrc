@@ -31,6 +31,12 @@ set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 
+
+"======================================================
+" Plugin 'Yggdroot/indentLine' settings
+"======================================================
+let g: indentLine_char = '|'
+
 "======================================================
 " Highlight code
 "======================================================
@@ -48,7 +54,7 @@ au BufRead,BufNewFile *.pc set filetype=c
 highlight ModeMsg ctermfg=Magenta
 
 "======================================================
-" Vundle settings
+" Plugin 'VundleVim/Vundle.vim' settings
 "======================================================
 
 set nocompatible              " be iMproved, required
@@ -72,7 +78,10 @@ call vundle#end()            " required
 
 filetype plugin indent on    " required
 
+"======================================================
 " Cscope settings
+"======================================================
+
 " Scope. Update.
 function UpdateCScopeDB()
    let curdir = getcwd()
@@ -107,3 +116,4 @@ endif
 
 " disable comment autoadd
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
