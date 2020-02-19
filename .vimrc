@@ -31,12 +31,6 @@ set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 
-
-"======================================================
-" Plugin 'Yggdroot/indentLine' settings
-"======================================================
-let g: indentLine_char = '|'
-
 "======================================================
 " Highlight code
 "======================================================
@@ -116,4 +110,9 @@ endif
 
 " disable comment autoadd
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+"======================================================
+" Plugin 'Yggdroot/indentLine' settings
+"======================================================
+let g:indentLine_char = '|'
 
