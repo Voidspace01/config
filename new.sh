@@ -11,8 +11,7 @@ cp .zshrc ~
 cp .tmux.conf ~
 
 # cscope script
-mkdir ~/script
-cp cs.sh ~/script
+cp script ~ -rf
 chmod +x ~/script/cs.sh
 
 # install fonts

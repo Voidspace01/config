@@ -1,7 +1,7 @@
-#witch to ZSH shell
-if test -t 1; then
+#switch to ZSH shell
+#if test -t 1; then
 #   exec zsh
-fi
+#fi
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -78,3 +78,4 @@ if ! shopt -oq posix; then
    fi
 fi
 
+export PATH=$PATH:~/script
